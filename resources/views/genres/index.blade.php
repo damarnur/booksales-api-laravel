@@ -13,6 +13,7 @@
         <ul>
             <li>ID Genre: {{$genre['id']}}</li>
             <li>Nama Genre: {{$genre['name']}}</li>
+            <li>Deskripsi Genre: {{$genre['description']}}</li>
         </ul>
     @endforeach
 </body>

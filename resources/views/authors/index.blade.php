@@ -13,7 +13,8 @@
         <ul>
             <li>ID Author: {{$author['id']}}</li>
             <li>Nama Author: {{$author['name']}}</li>
-            <li>Foto Author: {{$author['cover_photo']}}</li>
+            <li>Foto Author: {{$author['photo']}}</li>
+            <li>Bio Author: {{$author['bio']}}</li>
         </ul>
     @endforeach
 </body>

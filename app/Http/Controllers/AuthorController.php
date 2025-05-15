@@ -15,3 +15,5 @@ class AuthorController extends Controller
         return view('authors.index', ['authors' => $authors]);
     }
 }
+
+?>

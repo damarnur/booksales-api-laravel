@@ -16,3 +16,5 @@ class BookController extends Controller
         return view('books.index', ['books' => $books]); // mengirim data ke
     }
 }
+
+?>

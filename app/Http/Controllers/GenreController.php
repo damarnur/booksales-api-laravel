@@ -16,3 +16,5 @@ class GenreController extends Controller
         return view('genres.index', ['genres' => $genres]);
     }
 }
+
+?>

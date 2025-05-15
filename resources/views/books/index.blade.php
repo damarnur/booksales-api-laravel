@@ -14,7 +14,9 @@
             <li>Judul Buku: {{$item['title']}}</li>
             <li>Deskripsi: {{$item['description']}}</li>
             <li>Harga: {{$item['price']}}</li>
-            <li>Stok: {{$item['stock']}}</li>
+            <li>Cover Photo: {{$item['cover_photo']}}</li>
+            <li>ID Genre: {{$item['genre_id']}}</li>
+            <li>ID Author: {{$item['author_id']}}</li>
         </ul>
     @endforeach
 </body>
