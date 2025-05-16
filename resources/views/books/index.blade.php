@@ -11,9 +11,11 @@
 
     @foreach($books as $item)
         <ul>
+            <li>ID Buku: {{$item['id']}}</li>
             <li>Judul Buku: {{$item['title']}}</li>
             <li>Deskripsi: {{$item['description']}}</li>
             <li>Harga: {{$item['price']}}</li>
+            <li>Harga: {{$item['stock']}}</li>
             <li>Cover Photo: {{$item['cover_photo']}}</li>
             <li>ID Genre: {{$item['genre_id']}}</li>
             <li>ID Author: {{$item['author_id']}}</li>

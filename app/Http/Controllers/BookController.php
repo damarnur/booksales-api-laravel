@@ -10,11 +10,8 @@ class BookController extends Controller
 {
     // Method di book controller
     public function index(){
-        $data = new Book(); // membuat objek untuk menampung data dari buku
-        $books = $data->getBooks();
+        $books  = Book::all();
         
         return view('books.index', ['books' => $books]); // mengirim data ke
     }
 }
-
-?>
