@@ -14,7 +14,7 @@ class BookController extends Controller
         
         // return view('books.index', ['books' => $books]); // mengirim data ke
         return response()->json([
-            "success" => true,
+            "status" => 200,
             "message" => "Get all resources",
             "data" => $books
         ]);

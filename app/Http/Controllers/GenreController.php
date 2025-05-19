@@ -13,7 +13,7 @@ class GenreController extends Controller
 
         // return view('genres.index', ['genres' => $genres]);
         return response()->json([
-            "success" => true,
+            "status" => 200,
             "message" => "Get all resources",
             "data" => $genres
         ], 200);
