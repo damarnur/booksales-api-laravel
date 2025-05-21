@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Genre extends Model
 {
-    public function getGenres(){
-        return $this->genres;
-    }
-
     protected $table = 'genres';
+
+    protected $fillable = [
+        'id',
+        'name',
+        'description'
+    ];
 }
