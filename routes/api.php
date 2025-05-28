@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\TransactionController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -19,13 +20,21 @@ Route::apiResource('/books', BookController::class)->only(['index', 'show']);
 Route::apiResource('/genres', GenreController::class)->only(['index', 'show']);
 Route::apiResource('/authors', AuthorController::class)->only(['index', 'show']);
 
+
 Route::middleware(['auth:api'])->group(function (){
 
+    Route::apiResource('/transactions', TransactionController::class)->only(['index', 'show', 'store']);
+
+    
     Route::middleware(['role:admin'])->group(function () {
         // route resource books
         Route::apiResource('/books', BookController::class)->only(['store', 'destroy', 'update']);
         // route override
         Route::post('/books/{id}', [BookController::class, 'update']);
+        
+        Route::apiResource('/transactions', TransactionController::class)->only(['destroy', 'update']);
+        // route override
+        Route::post('/transactions/{id}', [TransactionController::class, 'update']);
 
         // route resource genres
         Route::apiResource('/genres', GenreController::class)->only(['store', 'destroy', 'update']);
